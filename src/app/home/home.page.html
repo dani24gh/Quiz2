@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+Bromita sale mal uwu
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,30 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Bromas</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-content class="ion-padding">
+    <ion-card *ngIf="bromaAleatoria">
+      <ion-card-header>
+        <ion-card-title>Chiste JAJA</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{ bromaAleatoria }}
+      </ion-card-content>
+    </ion-card>
+
+    <ng-template #cargandoBroma>
+    </ng-template>
+
+    <ion-list *ngIf="cargandoCategorias">
+      <ion-item *ngFor="let categoria of categoriasBromas">
+        <ion-label>{{ categoria }}</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ng-template #cargandoCategorias>
+    </ng-template>
+  </ion-content>
 </ion-content>
